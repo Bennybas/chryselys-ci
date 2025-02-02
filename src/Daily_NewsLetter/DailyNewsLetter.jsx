@@ -2,8 +2,9 @@ import React, { useEffect, useState } from 'react';
 import { CircleX } from 'lucide-react';
 import { useNavigate, useLocation } from 'react-router-dom';
 import HeaderDailyNews from './HeaderDailyNews';
+import { fetchNewsletters } from '../api/newsletterApi';
 
-const DailyNewsLetter = ({setIsLoading}) => {
+const DailyNewsLetter = ({ setIsLoading }) => {
     const navigate = useNavigate();
     const [cards, setCards] = useState([]);
     const [loading, setLoading] = useState(true);
@@ -14,37 +15,39 @@ const DailyNewsLetter = ({setIsLoading}) => {
     const [title, setTitle] = useState(localStorage.getItem("pageTitle") || "Error");
 
     useEffect(() => {
-    if (location.state?.title) {
-        setTitle(location.state.title);
-        localStorage.setItem("pageTitle", location.state.title);
-    }
+        if (location.state?.title) {
+            setTitle(location.state.title);
+            localStorage.setItem("pageTitle", location.state.title);
+        }
     }, [location.state]);
 
     useEffect(() => {
-        const fetchData = async () => {
+        const loadNewsletters = async () => {
             try {
-                const response = await fetch('http://localhost:5000/newsletter');
-                if (!response.ok) {
-                    throw new Error('Failed to fetch data');
-                }
-                const data = await response.json();
+                setLoading(true);
+                const data = await fetchNewsletters();
                 setCards(data);
+                setError(null);
             } catch (err) {
                 setError(err.message);
+                console.error('Error fetching newsletters:', err);
             } finally {
                 setLoading(false);
             }
         };
-        fetchData();
+
+        loadNewsletters();
     }, []);
 
-    const handleDrugClick = (drug, e,title) => {
+    const handleDrugClick = (drug, e, title) => {
         e.stopPropagation();
         setIsLoading(true);
         setTimeout(() => {
-            navigate('/daily-news-letter/newspage', { state: { indication: drug,title:title } });
-          setIsLoading(false); 
-        }, 800); 
+            navigate('/daily-news-letter/newspage', { 
+                state: { indication: drug, title: title } 
+            });
+            setIsLoading(false);
+        }, 800);
     };
 
     const handleCloseClick = (index, e) => {
@@ -54,8 +57,6 @@ const DailyNewsLetter = ({setIsLoading}) => {
 
     if (loading) return <p className="text-center">Loading...</p>;
     if (error) return <p className="text-center text-red-500">Error: {error}</p>;
-
-    
 
     return (
         <div>
@@ -76,7 +77,10 @@ const DailyNewsLetter = ({setIsLoading}) => {
                                         style={{ perspective: '1000px' }}
                                     >
                                         <div 
-                                            onClick={() => setFlipped(prev => ({ ...prev, [cardIndex]: !prev[cardIndex] }))}
+                                            onClick={() => setFlipped(prev => ({ 
+                                                ...prev, 
+                                                [cardIndex]: !prev[cardIndex] 
+                                            }))}
                                             className={`relative w-full h-full transition-transform duration-500 cursor-pointer`}
                                             style={{ 
                                                 transformStyle: 'preserve-3d',
@@ -86,9 +90,7 @@ const DailyNewsLetter = ({setIsLoading}) => {
                                             {/* Front Side */}
                                             <div 
                                                 className="absolute w-full h-full backface-hidden bg-white border border-gray-300 rounded-xl p-4 flex flex-col items-center justify-between"
-                                                style={{ 
-                                                    backfaceVisibility: 'hidden',
-                                                }}
+                                                style={{ backfaceVisibility: 'hidden' }}
                                             >
                                                 <div className="flex items-center justify-center h-[150px] w-full">
                                                     <img
@@ -122,7 +124,7 @@ const DailyNewsLetter = ({setIsLoading}) => {
                                                             <button
                                                                 key={i}
                                                                 className="bg-[#004567]/70 text-white px-4 py-2 rounded-md shadow-md hover:bg-[#004567]/90 transition"
-                                                                onClick={(e) => handleDrugClick(drug, e,card.title)}
+                                                                onClick={(e) => handleDrugClick(drug, e, card.title)}
                                                                 style={{fontSize: '12px'}}
                                                             >
                                                                 {drug}
