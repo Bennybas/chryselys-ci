@@ -1,0 +1,87 @@
+{
+  
+  "drug_data": [
+    {
+      "drug_name": "Adalimumab (Humira)",
+      "competitors": "Amjevita",
+      "open_source": "FDA",
+      "news_topic": "Humira's resilience in the face of biosimilar competition",
+      "source": "Clarivate",
+      "source_link": "https://clarivate.com/academia-government/lp/humira-survives-competition-from-adalimumab-biosimilars-for-now/",
+      "news_date": "2024-07-30",
+      "summary": "Despite the availability of nine lower-priced rival products in the US, AbbVie's Humira (adalimumab) has retained more than 80% of patients over the past year.",
+      "last_updated_date": "2025-02-02"
+    },
+    {
+      "drug_name": "Adalimumab (Humira)",
+      "competitors":  "Hadlima",
+      "open_source": "FDA",
+      "news_topic": "Humira's resilience in the face of biosimilar competition",
+      "source": "Clarivate",
+      "source_link": "https://clarivate.com/academia-government/lp/humira-survives-competition-from-adalimumab-biosimilars-for-now/",
+      "news_date": "2024-07-30",
+      "summary": "Despite the availability of nine lower-priced rival products in the US, AbbVie's Humira (adalimumab) has retained more than 80% of patients over the past year.",
+      "last_updated_date": "2025-02-02"
+    },
+    {
+      "drug_name": "Etanercept (Enbrel)",
+      "competitors": "Erelzi",
+      "open_source": "EMA",
+      "news_topic": "Biosimilars of Enbrel",
+      "source": "FDA",
+      "source_link": "https://www.fda.gov/drugs/biosimilars/biosimilar-product-information",
+      "news_date": "2024-06-15",
+      "summary": "The FDA has approved biosimilars for Enbrel, including Erelzi and Eticovo, offering more treatment options for patients.",
+      "last_updated_date": "2025-02-02"
+    },
+    {
+      "drug_name": "Infliximab (Remicade)",
+      "competitors": "Inflectra",
+        
+      "open_source": "Clinical Trials",
+      "news_topic": "Biosimilars of Remicade",
+      "source": "FDA",
+      "source_link": "https://www.fda.gov/drugs/biosimilars/biosimilar-product-information",
+      "news_date": "2024-05-20",
+      "summary": "Several biosimilars for Remicade have been approved by the FDA, including Inflectra, Renflexis, Ixifi, and Avsola.",
+      "last_updated_date": "2025-02-02"
+    },
+    {
+      "drug_name": "Tocilizumab (Actemra)",
+      "competitors":"RoActemra",
+      "open_source": "EMA",
+      "news_topic": "Actemra's role in COVID-19 treatment",
+      "source": "EMA",
+      "source_link": "https://www.ema.europa.eu/en/medicines/human/EPAR/roactemra",
+      "news_date": "2024-08-10",
+      "summary": "Actemra (tocilizumab) has been authorized for the treatment of severe COVID-19 in hospitalized patients.",
+      "last_updated_date": "2025-02-02"
+    },
+    {
+      "drug_name": "Secukinumab (Cosentyx)",
+      "competitors": 
+        "Taltz",
+        
+      "open_source": "Google Search",
+      "news_topic": "Cosentyx approved for new indications",
+      "source": "FDA",
+      "source_link": "https://www.fda.gov/news-events/press-announcements/fda-approves-new-uses-cosentyx",
+      "news_date": "2024-09-05",
+      "summary": "The FDA has approved new indications for Cosentyx (secukinumab), expanding its use to additional inflammatory conditions.",
+      "last_updated_date": "2025-02-02"
+    },
+    {
+      "drug_name": "Secukinumab (Cosentyx)",
+      "competitors": "Siliq", 
+      "open_source": "Google Search",
+      "news_topic": "Cosentyx approved for new indications",
+      "source": "FDA",
+      "source_link": "https://www.fda.gov/news-events/press-announcements/fda-approves-new-uses-cosentyx",
+      "news_date": "2024-09-05",
+      "summary": "The FDA has approved new indications for Cosentyx (secukinumab), expanding its use to additional inflammatory conditions.",
+      "last_updated_date": "2025-02-02"
+    }
+  ]
+
+}
+  

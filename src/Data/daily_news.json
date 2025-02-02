@@ -1,0 +1,30 @@
+{
+    "newsletter": [
+      {
+        "title": "Immunology",
+        "icon": "/svg/alert-svgrepo-com.svg",
+        "drugs": ["Adalimumab (Humira)", "Etanercept (Enbrel)", "Infliximab (Remicade)", "Tocilizumab (Actemra)", "Secukinumab (Cosentyx)"]
+      },
+      {
+        "title": "Cardiology",
+        "icon": "/svg/alert-svgrepo-com.svg",
+        "drugs": ["Atorvastatin (Lipitor)", "Clopidogrel (Plavix)", "Metoprolol (Lopressor)", "Losartan (Cozaar)", "Amiodarone (Cordarone)"]
+      },
+      {
+        "title": "Neurology",
+        "icon": "/svg/alert-svgrepo-com.svg",
+        "drugs": ["Donepezil (Aricept)", "Rivastigmine (Exelon)", "Memantine (Namenda)", "Gabapentin (Neurontin)", "Levetiracetam (Keppra)"]
+      },
+      {
+        "title": "Oncology",
+        "icon": "/svg/alert-svgrepo-com.svg",
+        "drugs": ["Pembrolizumab (Keytruda)", "Nivolumab (Opdivo)", "Imatinib (Gleevec)", "Trastuzumab (Herceptin)", "Bevacizumab (Avastin)"]
+      },
+      {
+        "title": "Ophthalmology",
+        "icon": "/svg/alert-svgrepo-com.svg",
+        "drugs": ["Aflibercept (Eylea)", "Ranibizumab (Lucentis)", "Cyclosporine (Restasis)", "Brimonidine (Alphagan)", "Timolol (Timoptic)"]
+      }
+    ]
+  }
+  
